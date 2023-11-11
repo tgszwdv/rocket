@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket Game</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+        }
+        #gameContainer {
+            position: relative;
+        }
+        canvas {
+            border: 1px solid #000;
+        }
+        #successMessage, #blockCounter, #timer {
+            position: absolute;
+            padding: 6px;
+            font-size: 18px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            opacity: 1; /* Set initial opacity to 1 */
+            transition: opacity 0.5s ease;
+        }
+        #successMessage {
+            bottom: 20px;
+            left: 20px;
+            background-color: #4CAF50; /* Green background for success message */
+        }
+        #blockCounter {
+            bottom: 60px;
+            left: 20px;
+        }
+        #timer {
+            bottom: 100px;
+            left: 20px;
+            background-color: #f44336; /* Red background for timer message */
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="successMessage">Pousou com sucesso!</div>
+        <div id="blockCounter">Blocos Coletados: 0</div>
+        <div id="timer">Tempo Restante: 20s</div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
